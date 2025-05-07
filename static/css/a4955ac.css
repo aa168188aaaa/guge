@@ -1,0 +1,263 @@
+﻿.common-heading {
+    max-width: 60em
+}
+
+.card_swiper {
+    margin: 0 auto;
+    max-width: 1380px;
+    padding: 0 40px;
+}
+
+@media screen and (max-width: 860px) {
+    .card_swiper {
+        padding: 0 24px;
+    }
+}
+
+
+.common-heading--centered {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center
+}
+
+.common-heading__title {
+    margin: auto auto .5em
+}
+
+.common-heading__title:last-child {
+    margin-bottom: auto
+}
+
+.common-heading__description li,
+.common-heading__description p,
+.common-heading__description ul {
+    line-height: 1.33
+}
+
+
+.common-heading__description p:not(:last-child),
+.common-heading__description ul:not(:last-child) {
+    margin-bottom: .75em
+}
+
+.common-heading__description li:not(:last-child) {
+    margin-bottom: .375em
+}
+
+.common-heading__description p {
+    padding: 0
+}
+
+.common-heading__description p:first-child {
+    margin-top: 0 !important
+}
+
+.common-heading__description p:last-child {
+    margin-bottom: 0 !important
+}
+
+.common-heading__description a {
+    color: var(--theme-link)
+}
+
+.common-heading__description a:hover {
+    color: var(--theme-link-hover);
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+    text-decoration-color: var(--theme-link-hover)
+}
+
+.common-heading__description a:active {
+    color: var(--theme-link-active);
+    -webkit-text-decoration: underline;
+    text-decoration: underline;
+    text-decoration-color: var(--theme-link-active)
+}
+
+
+.common-heading__description ul {
+    list-style: disc none outside;
+    padding: 0 0 0 1em
+}
+
+
+.common-heading__description ul li {
+    line-height: inherit;
+    padding-left: .5em
+}
+
+.common-heading__description ul {
+    list-style: disc none outside
+}
+
+.common-heading__description {
+    margin: 0 auto
+}
+
+.common-heading__description a {
+    -webkit-text-decoration: underline;
+    text-decoration: underline
+}
+
+.common-heading__description a:hover {
+    color: var(--theme-link)
+}
+
+.common-arrow-button {
+    cursor: pointer;
+    height: 3.5em;
+    width: 3.5em
+}
+
+.common-arrow-button__button {
+    background-color: var(--theme-page-bg);
+    border-radius: 50%;
+    box-shadow: 0 6px 7.5px -2px rgba(0, 0, 0, .075), 0 12.5px 19px 0 rgba(0, 0, 0, .023), 0 4.5px 25px 0 rgba(0, 0, 0, .023);
+    color: var(--theme-page-fg);
+    display: block;
+    height: 100%;
+    position: relative;
+    transform: scale(1) translateY(0);
+    transition: box-shadow .15s cubic-bezier(.165, .84, .44, 1) 0ms, transform .15s cubic-bezier(.165, .84, .44, 1) 0ms;
+    width: 100%
+}
+
+.common-arrow-button:hover .common-arrow-button__button {
+    box-shadow: 0 9px 11.5px -3px rgba(0, 0, 0, .15), 0 18.5px 28.5px 0 rgba(0, 0, 0, .051), 0 7px 37.5px 0 rgba(0, 0, 0, .039);
+    transform: scale(1.033)
+}
+
+.common-arrow-button:active .common-arrow-button__button {
+    box-shadow: 0 6px 7.5px -2px rgba(0, 0, 0, .038), 0 12.5px 19px 0 rgba(0, 0, 0, .011), 0 4.5px 25px 0 rgba(0, 0, 0, .011);
+    transform: scale(.98)
+}
+
+.common-arrow-button__icon {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.common-pager {
+    display: grid;
+    grid-template-areas: "prev pages next";
+    grid-template-columns: 0 100% 0;
+    grid-template-rows: auto;
+    position: relative
+}
+
+.common-pager__next,
+.common-pager__prev {
+    align-items: center;
+    display: flex;
+    position: relative
+}
+
+.common-pager__prev {
+    grid-area: prev
+}
+
+.common-pager__next {
+    grid-area: next
+}
+
+.common-pager__button {
+    align-self: center;
+    position: relative;
+    transition: opacity .5s cubic-bezier(.165, .84, .44, 1) 0ms, visibility .5s cubic-bezier(.165, .84, .44, 1) 0ms;
+    z-index: 100
+}
+
+.common-pager__button--float {
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%)
+}
+
+.common-pager__button:disabled {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden
+}
+
+.common-pager__button--prev {
+    grid-area: prev
+}
+
+.common-pager__button--prev.common-pager__button--float {
+    left: 0;
+    position: absolute;
+    top: .5;
+    transform: translateY(-.5)
+}
+
+.common-pager__button--next {
+    grid-area: next
+}
+
+.common-pager__pages {
+    align-items: stretch;
+    display: grid;
+    grid-area: pages;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    position: relative
+}
+
+.common-pager__page {
+    grid-area: 1/1;
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.common-pager__page--active {
+    opacity: 1;
+    transition: transform 1.5s cubic-bezier(.075, .82, .165, 1) 0ms, opacity 1.5s cubic-bezier(.075, .82, .165, 1) 0ms;
+    z-index: 10
+}
+
+.common-pager__page--before {
+    transform: translateX(-100px);
+}
+
+.common-pager__page--after,
+.common-pager__page--before {
+    opacity: 0;
+    transition: transform 1s cubic-bezier(.075, .82, .165, 1) 0ms, opacity 1s cubic-bezier(.075, .82, .165, 1) 0ms;
+    z-index: -1;
+}
+
+.common-pager__page--after {
+    transform: translateX(100px)
+}
+
+.common-pager__page-inner {
+    height: 100%
+}
+
+.px-auto-clamp {
+    padding: 0;
+    position: relative
+}
+
+.px-auto-clamp,
+.px-auto-clamp__clamp {
+    text-align: justify;
+    display: block;
+    display: -webkit-box;
+    overflow: hidden
+}
+
+.px-auto-clamp__clamp {
+    -webkit-box-orient: vertical;
+    height: auto;
+    left: 0;
+    max-height: 100%;
+    position: absolute;
+    top: 0;
+    width: 100%
+}
